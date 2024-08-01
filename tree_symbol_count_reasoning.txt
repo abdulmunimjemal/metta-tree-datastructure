@@ -1,0 +1,32 @@
+Base Case
+- if the tree is an empty tree, the function returns 0.
+This is correct because an empty tree contains no symbol,
+hence the count of any symbol should be there.
+
+Inductive step
+
+Assume that for any binary tree T with depth k or less, the function 
+count-symbol correctly counts the occurences of a symbol.
+We need to show that the function also works for a tree T' with
+depth k + 1.
+
+Consider a tree T', having symbol sym, left subtree L and right subtree R.
+By inductive hypothesis, the function `count-symbol` correctly counts the occurences of
+the symbol in the subtrees L and R since they are smaller subtrees with depth k or less.
+
+For the tree T', 
+ if the symbol is equal to the search symbol, the function returns
+ + 1 + left subtree count + right subtree count. 
+ else
+  left subtree count + right subtree count.
+
+This structure ensure that the function correctly counts any occurences
+of the symbol at the root, and recursively counts occurences in the left and right
+subtrees.
+
+
+By structural induction, we have shown that the count-symbol function correctly
+counts the occurences of a symbol in any binary tree. The base case handles the simplest
+tree (an empty tree), and the inductive step shows tht if the function works for smaller trees it
+also works for a tree constructed from those smaller trees.
+Thus, the function is correct for all binary trees.

@@ -1,0 +1,16 @@
+Write a function that calculates the maximum tree depth. Assume that trees are abstracted as expressions.
+Implement a function to check if a symbol is inside a tree. If it exists, it should return true or else it should return false.’
+Implement a function that counts the number instances of a symbol in the tree.
+
+N.B: You should reason out why your algorithm works. This should be written out in separate text files. They also should be in your repository. Failing to explain why your code works will automatically nullify your efforts.
+Assume that the tree is a binary tree.
+The functions should be written using the meTTa programming language.
+
+Format:
+Read about structural induction and use that format to reason about your work.
+Or
+Use the format in the book Introduction to Algorithms: Fourth Edition (pg. 43)
+(a b d)
+
+Send your repo link on: senaynahom00@gmail.com
+

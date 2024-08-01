@@ -1,0 +1,32 @@
+DEFINITION
+
+- The depth of an empty tree is 0. 
+  By convention, We will call it NillTree.
+- The depth of non-empty tree is 1 plus the maximum depth of 
+   its left and right subtree.
+
+Proving Correctness
+
+Base Case:
+ If the tree is empty 'NilTree', the function returns 0.
+
+Assume that for any binary tree T with depth k or less,
+the `max-depth` function computes the tree depth.
+Now, we will prove that the function also works for tree T'
+with depth k + 1.
+
+Let, T' have left subtree L and right subtree R. According to our definition
+max-depth of T' is 1 + max(max-depth(L), max-depth(R)).
+
+According to our hypothesis, the function max-depth computes the depth of L and R since they are
+smaller subtrees with depth k or less. 
+
+Therefore, the function max-depth for T' will return:
+max-depth(T') = 1 + max(max-depth(L), max-depth(R))
+this matches our defintion of non-empty tree.
+
+By structural induction, it's proven that the max-depth function computes
+depth of any binary tree. The base case handles the simplest tree (Empty), and
+the inductive steps show that if the function works for smaller trees, it also
+works for a tree constructed from those smaller trees.
+:- Therefore,the function is correct for all binary trees.

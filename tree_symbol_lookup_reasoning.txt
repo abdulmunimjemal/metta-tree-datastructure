@@ -1,0 +1,27 @@
+DEFINITION
+
+The function find-symbol checks if a given symbol is present
+in a binary tree.
+
+Base Case:
+- If the tree is empty ('NilTree'), returns False,
+  this is correct because an empty tree cannot contain any symbols.
+- If the root symbol equals the search symbol, returns True.
+
+Inductive Step 
+- Assume for any binary tree T with depth k or less, the function
+find-symbol correctly determines if a symbol is in a tree. Now, we need
+to show that the function also works for a tree T' with depth k+1.
+
+Consider a tree T', with symbol sym (root symbol), left subtree L, and right subtree R.
+By inductive hypothesis, the function correctly depetrmines if the symbol
+is in the subtrees L and R since they are smaller subtree with depth k
+or less.
+
+For the tree T',  if the sym (root symbol) is equal to the search symbol, the function
+returns True, else, it recursively check the left and right subtrees.
+
+By structural induction, we have shown that find-symbol function correctly determines
+if a symbol is in a any binary tree. The base case handles the simplest tree (empty tree),
+and the inductive step shows if the function works for smaller trees, it also works for
+a tree constructed from those smaller trees. Therefore, the function is correct for all binary trees.
